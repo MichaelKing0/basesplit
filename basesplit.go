@@ -20,6 +20,9 @@ func Split(number string, base int) []Number {
 	sections := []Number{}
 
 	for i, value := range characters {
+		if string(value) == "0" {
+			continue
+		}
 
 		paddedNumber := fmt.Sprintf("%-*s", len(characters)-i, string(value))
 		paddedNumber = strings.ReplaceAll(paddedNumber, " ", "0")
