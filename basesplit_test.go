@@ -6,10 +6,10 @@ func TestSplit(t *testing.T) {
 	got := Split("1010", 2)
 
 	expectation := []Number{
-		Number{base: 2, asDecimal: 8, asBase: "1000"},
-		Number{base: 2, asDecimal: 0, asBase: "000"},
-		Number{base: 2, asDecimal: 2, asBase: "10"},
-		Number{base: 2, asDecimal: 0, asBase: "0"},
+		Number{Base: 2, AsDecimal: 8, AsBase: "1000"},
+		Number{Base: 2, AsDecimal: 0, AsBase: "000"},
+		Number{Base: 2, AsDecimal: 2, AsBase: "10"},
+		Number{Base: 2, AsDecimal: 0, AsBase: "0"},
 	}
 
 	for i, want := range expectation {

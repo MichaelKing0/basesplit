@@ -8,9 +8,9 @@ import (
 
 // Number struct
 type Number struct {
-	base      int
-	asBase    string
-	asDecimal int64
+	Base      int
+	AsBase    string
+	AsDecimal int64
 }
 
 // Split a number in any base
@@ -26,7 +26,7 @@ func Split(number string, base int) []Number {
 
 		realNumber, _ := strconv.ParseInt(paddedNumber, base, 0)
 
-		sections = append(sections, Number{base: base, asBase: paddedNumber, asDecimal: realNumber})
+		sections = append(sections, Number{Base: base, AsBase: paddedNumber, AsDecimal: realNumber})
 	}
 
 	return sections
